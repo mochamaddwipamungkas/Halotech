@@ -1,0 +1,71 @@
+GET http://localhost:5000/pasiens
+
+###
+POST http://localhost:5000/pasiens
+Content-Type: application/json
+
+{
+    "id_pasien": 5,
+    "nama": "Rahmah",
+    "usia": 28,
+    "alamat": "Jakarta",
+    "telpon_darurat": 838123456,
+    "usia_kehamilan": 110,
+    "proses_partus": "normal",
+    "jumlah_bayi": 1
+}
+
+###
+PATCH  http://localhost:5000/pasiens/3
+Content-Type: application/json
+
+{
+    "id_pasien": 3,
+    "nama": "Jeni",
+    "usia": 33,
+    "alamat": "Jakarta",
+    "telpon_darurat": 83813455,
+    "usia_kehamilan": 110,
+    "proses_partus": "normal",
+    "jumlah_bayi": 7
+}
+
+###
+DELETE   http://localhost:5000/pasiens/2
+
+###
+GET http://localhost:5000/babys
+
+
+###
+POST   http://localhost:5000/babys
+Content-Type: application/json
+
+{
+    "id": 3,
+    "pasien_id": "1",
+    "gender": "wanoita",
+    "panjang": 30,
+    "berat": 2.5,
+    "status": "Sehat",
+    "tanggal_lahir": "10-08-2022",
+    "jam_lahir": "05.00"
+}
+
+###
+PATCH   http://localhost:5000/babys/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "pasien_id": "3",
+    "gender": "Cowo",
+    "panjang": 40,
+    "berat": 3,
+    "status": "Sehat",
+    "tanggal_lahir": "12-12-2022",
+    "jam_lahir": "03.00"
+}
+
+###
+DELETE http://localhost:5000/babys/3

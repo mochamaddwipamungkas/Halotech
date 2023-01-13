@@ -13,7 +13,7 @@ export const getPasienById = async (req, res) => {
     try {
         const response = await Pasien.findOne({
             where: {
-                id: req.params.id
+                id_pasien: req.params.id
             }
         });
         res.status(200).json(response);
@@ -36,7 +36,7 @@ export const updatePasien = async (req, res) => {
     try {
         await Pasien.update(req.body, {
             where: {
-                id: req.params.id
+                id_pasien: req.params.id
             }
         });
         res.status(200).json({ msg: "Pasien Updated" });
@@ -49,7 +49,7 @@ export const deletePasien = async (req, res) => {
     try {
         await Pasien.destroy({
             where: {
-                id: req.params.id
+                id_pasien: req.params.id
             }
         });
         res.status(200).json({ msg: "Pasien Deleted" });

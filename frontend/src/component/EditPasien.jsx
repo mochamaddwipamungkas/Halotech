@@ -45,7 +45,7 @@ export default function EditPasien() {
     };
 
     return (
-        <div className="container-sm" style={{ width: "600px" }}>
+        <div className="container" style={{ width: "600px", padding: "60px 0" }}>
             <form>
                 <div className="mb-3">
                     <label className="form-label">Id Pasien</label>
@@ -93,7 +93,7 @@ export default function EditPasien() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Usia Kehamilan</label>
+                    <label className="form-label">Usia Kehamilan (Hari)</label>
                     <input
                         type="text"
                         className="form-control"
@@ -123,7 +123,7 @@ export default function EditPasien() {
                         onChange={(e) => setJmlBayi(e.target.value)}
                     />
                 </div>
-                <button type="button" className="btn btn-primary" onClick={updatePasien}>Save</button>
+                <button type="button" className="btn btn-primary mt-5" onClick={updatePasien}>Save</button>
             </form>
         </div>
     )

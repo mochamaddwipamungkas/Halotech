@@ -14,7 +14,7 @@ const Pasien = db.define('pasien', {
         allowNull: false,
     },
     usia: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false
     },
     alamat: {
@@ -22,19 +22,20 @@ const Pasien = db.define('pasien', {
         allowNull: false
     },
     telpon_darurat: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false,
+
     },
     usia_kehamilan: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false
     },
     proses_partus: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false
     },
     jumlah_bayi: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false
     }
 

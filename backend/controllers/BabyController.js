@@ -13,7 +13,7 @@ export const getBabyById = async (req, res) => {
     try {
         const response = await Baby.findOne({
             where: {
-                id: req.params.id
+                id_baby: req.params.id
             }
         });
         res.status(200).json(response);
@@ -36,7 +36,7 @@ export const updateBaby = async (req, res) => {
     try {
         await Baby.update(req.body, {
             where: {
-                id: req.params.id
+                id_baby: req.params.id
             }
         });
         res.status(200).json({ msg: "Baby Updated" });
@@ -49,7 +49,7 @@ export const deleteBaby = async (req, res) => {
     try {
         await Baby.destroy({
             where: {
-                id: req.params.id
+                id_baby: req.params.id
             }
         });
         res.status(200).json({ msg: "Baby Deleted" });

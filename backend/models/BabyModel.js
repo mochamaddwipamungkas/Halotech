@@ -4,12 +4,12 @@ import db from "../config/Database.js";
 const { DataTypes } = Sequelize;
 
 const Baby = db.define('baby', {
-    id: {
+    id_baby: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true
     },
-    pasien_id: {
+    id_pasien: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
@@ -18,11 +18,11 @@ const Baby = db.define('baby', {
         allowNull: false,
     },
     panjang: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
     berat: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
     status: {

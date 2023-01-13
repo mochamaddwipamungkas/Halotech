@@ -28,7 +28,8 @@ export default function AddPasien() {
 
 
     return (
-        <div className="container-sm" style={{ width: "600px" }}>
+        <div className="container-sm" style={{ width: "600px", padding: "60px 0" }}>
+            <h1 className="mt-5 mb-5">Form Pasien</h1>
             <form>
                 <div className="mb-3">
                     <label className="form-label">Id Pasien</label>
@@ -76,7 +77,7 @@ export default function AddPasien() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Usia Kehamilan</label>
+                    <label className="form-label">Usia Kehamilan (Hari)</label>
                     <input
                         type="text"
                         className="form-control"
@@ -106,7 +107,7 @@ export default function AddPasien() {
                         onChange={(e) => setJmlBayi(e.target.value)}
                     />
                 </div>
-                <button type="button" className="btn btn-primary" onClick={savePasien}>Kirim</button>
+                <button type="button" className="btn btn-primary mt-5" onClick={savePasien}>Kirim</button>
             </form>
         </div>
 

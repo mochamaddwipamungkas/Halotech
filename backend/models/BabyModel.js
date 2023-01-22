@@ -5,12 +5,12 @@ const { DataTypes } = Sequelize;
 
 const Baby = db.define('baby', {
     id_baby: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(5),
         allowNull: false,
         primaryKey: true
     },
     id_pasien: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(5),
         allowNull: false
     },
     gender: {
@@ -36,6 +36,9 @@ const Baby = db.define('baby', {
     jam_lahir: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    anak_ke: {
+        type: DataTypes.INTEGER,
     }
 
 

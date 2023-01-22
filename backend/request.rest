@@ -1,4 +1,4 @@
-GET http://localhost:5000/pasiens/5
+GET http://localhost:5000/alldata
 
 ###
 POST http://localhost:5000/pasiens
@@ -20,7 +20,7 @@ PATCH  http://localhost:5000/pasiens/5
 
 {
     
-    "nama": "Jeni",
+    "id_pasien": 2,
     "usia": 33,
     "alamat": "Jakarta",
     "telpon_darurat": 83813455,
@@ -52,12 +52,12 @@ Content-Type: application/json
 }
 
 ###
-PATCH   http://localhost:5000/babys/1
+PATCH   http://localhost:5000/babys/12
 Content-Type: application/json
 
 {
     "id_baby": 1,
-    "id_pasien": "3",
+    "id_pasien": "xx",
     "gender": "Cowo",
     "panjang": 40,
     "berat": 3,

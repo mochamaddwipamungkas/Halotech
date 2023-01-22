@@ -4,11 +4,15 @@ import {
     getPasienById,
     createPasien,
     updatePasien,
-    deletePasien
+    deletePasien,
+    getAllData,
+    getAllDataById
 } from "../controllers/PasienController.js";
 
 const router = express.Router();
 
+router.get('/alldata', getAllData);
+router.get('/alldata/:id', getAllDataById);
 router.get('/pasiens', getPasiens);
 router.get('/pasiens/:id', getPasienById);
 router.post('/pasiens', createPasien);

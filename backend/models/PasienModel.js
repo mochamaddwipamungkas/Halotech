@@ -1,11 +1,12 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
+import Baby from "./BabyModel.js";
 
 const { DataTypes } = Sequelize;
 
 const Pasien = db.define('pasien', {
     id_pasien: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(5),
         allowNull: false,
         primaryKey: true
     },
@@ -40,6 +41,10 @@ const Pasien = db.define('pasien', {
     }
 
 });
+
+Pasien.hasMany(Baby, { foreignKey: 'id_pasien' });
+Baby.belongsTo(Pasien, { foreignKey: 'id_pasien' });
+
 export default Pasien;
 
 (async () => {
